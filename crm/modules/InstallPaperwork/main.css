@@ -1,0 +1,40 @@
+
+*{font-family: "Arial";}
+	.right{text-align: right;}
+	#wrap_up{1width: 960px; 1margin: 0 10px; overflow: auto; font-family: "Segoe UI";}
+	#h1eader{1height: 100px; background: url('gfs-logo2.jpg') no-repeat right; }
+	td.nav_td{vertical-align: top;}
+	.custom_table td{vertical-align: top;}
+	#nav{1float: left; width: 180px; padding: 5px 0;}
+	#nav ul{margin: 0; padding: 0; list-style: none;}
+	#nav li{width: 100%; margin: 0 0 2px 0; padding: 0;}
+	#nav li a{display: inline-block; width: 170px; color: black; padding: 5px;}
+	#nav li a.selected{color: green; text-decoration: none; border-left: 4px solid green; width: 166px; background: #E5E5E5;}
+	#nav li a:hover{text-decoration: none; background: #E5E5E5;}
+	#nav h3{margin: 5px 0 0 0;font-weight: normal; color: gray; font-size: 16px; color: green; text-align: right; border-top: 1px solid #EBEBEB; padding: 5px;}
+	#main{overflow: auto; float: left; width: inherit; border-left: 2px solid green; min-height: 1050px; font-size: 14px;}
+	#main h1{padding: 0; font-size: 1.5em;}
+	#main table, #main p, #main h1, #main h2 {padding-left: 5px;}
+	div.job_div table{width: 100%; margin: 10px 0; border-collapse: collapse;}
+	div.job_div th, div.job_div td{border: 1px solid white; background: #f2f2f2; padding: 5px;}
+	div.job_div th{background: green; color: white; cursor: pointer;}
+	td.center{text-align: center; vertical-align: middle;}
+	div.job_div tr:hover td{1background: #ffffcc;}
+	
+	div.job_div h2{margin-top: 10px; font-size: 18px; font-weight: normal; color: green;}
+	p.no_record{padding: 5px;}
+	a.view_detail{text-decoration: underline; color: green; cursor: pointer;}
+	
+	td.d_value{text-align: left;}
+	td.d_label{font-weight: 700; width: 200px;}
+	
+	span.error{display: inline-block; width: 14px; height: 14px; background: url('no.gif') no-repeat; margin-right: 5px;}
+	span.success{display: inline-block; width: 14px; height: 14px; background: url('yes.gif') no-repeat;  margin-right: 5px;}
+	span.green{color: green;}
+	span.red{color: red;}
+	p.normal{padding: 5px;}
+	
+	a.comment_detail:hover{cursor: pointer;}
+	
+	div#future_div{display:none;}
+	.sticky #past_header{position: fixed; }

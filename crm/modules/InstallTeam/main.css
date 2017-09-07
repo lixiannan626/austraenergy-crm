@@ -1,0 +1,32 @@
+
+	*{padding: 0; margin: 0; font-family: "Arial";}
+	.right{text-align: right;}
+	#wrap_up{1width: 960px; 1margin: 0 10px; overflow: auto;}
+	#h1eader{1height: 100px; background: url('gfs-logo2.jpg') no-repeat right; }
+	td.nav_td{vertical-align: top;}
+	.custom_table td{vertical-align: top;}
+	#nav{1float: left; width: 170px; padding: 0 10px;}
+	#nav ul{margin: 0; padding: 0; list-style: none;}
+	#nav li{width: 100%;}
+	#nav li a{display: inline-block; width: 100%; background: gray; color: white; font-weight: 700; padding: 5px;}
+	#nav li a:hover, #nav li a.selected{background: green; text-decoration: none;}
+	#nav h3{margin-top: 10px;font-size: 18px; font-weight: normal; color: gray; font-size: 16px;}
+	#main{padding-left: 5px; overflow: auto; float: left; width: inherit; margin-left: 4px; border-left: 2px solid green; min-height: 980px;}
+	#main h1{padding: 10px 0;}
+	div.job_div table{width: 100%; margin: 10px 0; border-collapse: collapse;}
+	div.job_div th, div.job_div td{border: 1px solid white; background: #f2f2f2; padding: 5px;}
+	div.job_div th{background: green; color: white;}
+	td.center{text-align: center; vertical-align: middle;}
+	div.job_div tr:hover td{1background: #ffffcc;}
+	
+	div.job_div h2{margin-top: 10px; font-size: 18px; font-weight: normal; color: green;}
+	p.no_record{padding: 5px;}
+	a.view_detail{text-decoration: underline; color: green; cursor: pointer;}
+	
+	td.d_value{text-align: left;}
+	td.d_label{font-weight: 700; width: 200px;}
+	
+	span.error{display: inline-block; width: 14px; height: 14px; background: url('no.gif') no-repeat; margin-right: 5px;}
+	span.success{display: inline-block; width: 14px; height: 14px; background: url('yes.gif') no-repeat;  margin-right: 5px;}
+	
+	p.normal{padding: 5px;}

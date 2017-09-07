@@ -1,0 +1,88 @@
+*{margin: 0; padding: 0;}
+body{background:#F2F2F2;font-family:Arial;padding-left:2%;padding-right:2%;}
+
+/*Layout*/
+body{padding: 0;}
+#header h1{1display: inline-block; width: 950px; margin: 0 auto;}
+#header .nav{1display: inline-block; width: 950px; margin: 0 auto;}
+#map p{width: 950px; margin: 0 auto;}
+#content{width: 950px; margin: 0 auto;}
+
+td,th {padding: 0 5px;border:1px solid black; text-align: center;}
+td {text-align: left;}
+table {border-collapse:collapse;margin-bottom:10px;}
+#notapproved {margin-left:30px;}
+#content {margin-left:auto;margin-right:auto;overflow: visible;}
+.general {width: 50%;margin: 0;margin-bottom:10px;float:right;}
+.toggle {margin:5px;}
+#container{background-color:white;margin: auto;}
+
+
+#notapproveddiv, #pendingdiv, #approveddiv {border-bottom: solid 1px black;padding-bottom: 15px;padding-left:10%;padding-right:10%;}
+h1{padding: 15px 0 10px 0;}
+h3{padding: 5px 0;}
+h4 img{vertical-align: text-top;}
+.summarytable{margin-top:5px;margin-bottom:0;}
+#header{padding: 0 30px;background:#2179d2; color: white; height: 92px;}
+a{color: #06c;}
+a:link,a:visited,a:hover{text-decoration:none;}
+a.togglelink{display:inline-block; vertical-align:middle;color:#248FB2;text-decoration:none;}
+a img{border:none;}
+#csvlink {padding: 5px;}
+#csvdown {color: white;}
+#pvd_check_table{width: 100%;}
+#pvd_check_table .remove_cell{width: 100px;}
+#pvd_check_table .pvd_cell{width: 100px;}
+#pvd_check_table .count_cell{width: 20px; text-align: center;}
+#pvd_check_table .number_cell{width: 20px; text-align: center;}
+
+div.toggle{padding: 0;margin: 5px;}
+button{background: #1090f3; color: white; border-radius: 5px;border: 1px solid #1090f3; padding: 3px;}
+button:hover{cursor:pointer;}
+
+div#map{padding: 10px; background: #114d89;}
+div#map p{font-size: 1em; color: white;}
+div#map a{color: white; text-decoration: underline;}
+div#map{box-shadow: 0 2px 5px #888;}
+
+div.call_log_data_div{width: 100%;overflow:auto;}
+table.call_log_data_table{float: left; width: 350px; margin: 10px 10px;}
+div.whole_width{width: 100%; overflow: auto;}
+table.data_table{float: left;margin-top: 5px;}
+div.pie_chart{float: left;}
+div.nav {width: 100%;overflow: auto;}
+div.nav ul{overflow: auto;}
+div.nav ul {margin: 0;}
+div.nav ul li{float: left; margin: 0;margin-right: 5px;}
+div.nav ul li a{color: white;display:block;padding: 5px 10px;}
+div.nav ul li a:hover{1color: #2179D2;padding: 5px 10px;}
+div.nav ul li:hover{color: #06c; background: #114D89;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+div.nav ul li a:hover{1background: white;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+div.nav ul li.selected{background: #114D89;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+div.nav ul li.selected a{color:#fff;}
+div#footer{	clear: both;	padding: 10px;	margin:10px 0px 0px;	box-shadow: inset 2px 2px 5px #888;  min-height: 200px;}
+div#footer p{width: 950px; margin: 0 auto;}
+#content{padding: 20px 40px;1font-size: 30px;}
+
+form #upload_submit{border:none; background: #2179D2; color:white;height:20px;padding: 0 10px;border-radius:10px;}
+
+form.email_unsub {font-size: 30px;}
+form.email_unsub input{1height: 30px;font-size: 30px;}
+form.email_unsub #email_submit {padding: 5px 20px; border-radius: 10px;color:white;background: #2179D2;border:none;}
+
+form button.submit{padding: 5px 20px; border-radius: 10px;color:white;background: #2179D2;border:none;}
+form input.submit{padding: 5px 20px; border-radius: 10px;color:white;background: #2179D2;border:none;}
+/*Top Index*/
+#crm-tool label, #upload-tool label, #employee-tool label, #instruction label
+{
+	width: 100px;
+	margin-right: 5px;
+	text-align:right;
+	display:inline-block;
+}
+
+
+		p.Download{min-height: 64px; padding:10px 10px 0 70px ; background: url(../img/down.png) no-repeat left 5px; font-size: 1.3em; margin: 10px; display: inline-block;
+-moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px#888;box-shadow: 0 0 5px #888;}
+		p.Download a{display: inline-block;}
+		p.Download span.explanation{display: inline-block; padding: 0; margin: 0; color: gray; font-size: 0.8em;}

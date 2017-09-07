@@ -1,0 +1,49 @@
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* Customised for Goforsolar */
+
+#wrap{width: 100%;}
+#container, #login_footer{width: 900px; margin: 40px auto;  font-family: "Segoe UI", Arial; overflow: auto;}
+#leftpanel{float: left; width: 52.76%; background: white;}
+#leftpanel img{margin-bottom: 0; padding-bottom: 0;}
+#text{padding: 10px 30px 40px 20px; background: #F89A1E; color: white; margin: 0;display: block;}
+#text h2{margin:0; padding: 0;font-weight: 100; width: 425px;}
+#text p{font-size: 86%;}
+
+#rightpanel{float: left; width: 47.23%; padding: 0 4% 0 0;}
+#rightpanel *{padding:0; margin:0;}
+#rightheader{ overflow: auto;}
+#rightheader img {max-width: 100%; float: right;}
+#form-wrapper {background: #bbb; color: white; padding: 20px; width: 100%;}
+#rightpanel .logindetail{width: 100%; padding:8px;line-height: 142%; margin-bottom: 5px; border:none;}
+#rightpanel .logindetail:active{background: white;}
+#rightpanel p.label{margin-bottom:4px;font-size: 86%;}
+#rightpanel #SubmitButton{margin-top: 15px; padding: 7px 0; background: #ffa01e; color: white; border: none; width: 100%; cursor: pointer; -webkit-appearance: none;}
+#rightpanel #SubmitButton:hover{background-color: #f4991c;}
+#login_footer{border-top: 1px solid gray; margin-top:50px;margin-bottom: 0px;}
+#login_footer p{padding: 5px; margin: 0; color: rgb(102, 102, 102);font-size: 86%; }
+#rightpanel #news{width: 100%;}
+#news{margin-top: 30px;}
+#news span.h4{font-weight: 100; color: white; background: #F89A1E; padding: 1px 5px; display: inline-block; border-bottom: none;}
+#news #newscontent{border: 1px solid #F89A1E; width: 100%; padding: 6px 8px; font-size: 86%;}
+#news span.newsdate{display: inline-block; color: purple; padding-right: 5px;}
+#news span.newsgroup{display: inline-block; color: green; padding-right: 5px;}
+
+input:-webkit-autofill {background-color: #fff !important;}
+
+/* IPAD PORTAIT */
+@media only screen and (max-width: 768px) {
+	#container, #login_footer {width: 750px;}
+}
+/* IPHONE */
+@media only screen and (max-width: 480px) {
+    #container, #login_footer {width: 95%; margin: 10px auto;}
+    #leftpanel, #news, #login_footer {display: none;}
+    #rightpanel {width: 100%;padding: 0;}
+}

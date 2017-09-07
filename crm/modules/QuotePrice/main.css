@@ -1,0 +1,18 @@
+#QuoteWrapper *, #QuoteWrapper *:before, #QuoteWrapper *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	}
+#QuoteWrapper a{display: inline-block; text-decoration:none; cursor: pointer;}
+#QuoteNav {background: #f3f3f3; overflow: auto;}
+#QuoteNav ul {list-style:none;}
+#QuoteNav li {list-style:none; float: left; }
+#QuoteNav a{padding:5px;}
+#QuoteNav a:hover, #QuoteNav a.Current{background: #CCC;}
+
+#QuoteAdmin {}
+#QuoteLeftContainer {width: 19.99%;overflow: auto; float: left; background: yellow; padding: 10px;}
+#QuoteRightContainer {width: 79.5%; overflow: auto; float: right; background: black;}
+#QuoteNewContainer {padding: 5px; border-radius: 5px; border: 1px solid #999; }

@@ -1,0 +1,447 @@
+@import "compass/css3";
+
+//Variables
+$customer_foreground: #78bd1e;
+$customer_background: #efefef;
+
+
+// Style Level 2 Nav
+.level2SelTab {
+  background: #78bd1e;
+  a{
+    color: white;
+    font-weight: normal;}
+}
+.level2SelTab, .level2UnSelTab {font-size: 1em;}
+
+//Style jscrollPane
+.jspDrag {
+  background: $customer_foreground !important;
+}
+.jspVerticalBar {
+  width: 6px !important;
+}
+.jspTrack {
+  background: darken($customer_background, 20%) !important;
+}
+
+// Use border-box to clear the cloud for elements within #QuoteWrapper
+#QuoteWrapper *, #QuoteWrapper *:before, #QuoteWrapper *:after {
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+// #QuoteWrapper and its children
+#QuoteWrapper {
+  position: relative;
+  a{
+    display: inline-block;
+    text-decoration:none;
+    cursor: pointer;}
+  label {
+    padding: 10px 0 5px;
+    display: inline-block;}
+  h1 {
+    padding: 5px 0;
+    border-bottom: 1px solid #999;
+    font-size: 1.3em;}
+  h2 {
+    padding: 5px 0;
+    border-bottom: 1px solid #999;
+    font-size: 1.2em;}
+  button, input[type='submit'] {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    @include border-radius(3px);
+    @include box-shadow(0 1px 1px 0 #999);
+    border: none;
+    color: #efefef;
+    font-weight: 700;
+    background: #82BA00;
+    cursor: pointer; }
+  .Reset{background: #ff9645;}
+  .Hidden {display: none;}
+}
+
+// Quote Nav, Level 3
+#QuoteNav {
+  padding: 3px 0 0;
+  background: #78bd1e;
+  overflow: auto;
+  ul {list-style:none;}
+  li {list-style: none; float: left;}
+  a {padding: 5px 7px; margin-left: 4px; color: white; &:hover, &.Current {background: #fff; color: #ff9645;}}
+}
+
+
+//----------------------------------------------------------------
+//[Quote Admin Page Layout]
+//#QuoteWrapper
+//  + #QuoteNav
+//    - ul
+//  + #QuoteAdmin
+//    - (.sticky-wrapper)
+//      - #QuoteLeftContainer
+//        - #QuoteNewContainer
+//          - .ItemFieldContainer
+//            - p input.ItemFieldInput
+//            - p.ItemFieldWarning
+//          - .QuoteButtons
+//            - .ItemCreate, .ItemAjax, ItemUpdate
+//    - #QuoteRightContainer
+//      - h1
+//      - .ComponentList
+//        - h2
+//        - .ReloadArea
+//          - table
+//            - tr td
+//              - .SmallControl, .ItemRetrieve, .ItemAjax, .ItemDelete, .ItemAvailable, .ItemUnavailable
+//
+//Navigation    #QuoteNav
+//Create/Update #QuoteLeftContainer
+//List          #QuoteRightContainer
+
+#QuoteLeftContainer {width: 19.9%;overflow: auto; float: left; padding: 10px; min-width: 140px;}
+#QuoteRightContainer {width: 79.9%; overflow: auto; float: right;  padding: 10px; padding-left: 0; min-width: 470px;}
+#QuoteNewContainer {
+  padding: 5px 10px;
+  @include border-radius(5px);
+  @include box-shadow(0 0 2px 0 #999);
+  border: 1px solid #999;
+  background: #fcfcfc;
+  input[type='text'], input[type='password'] {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #888;
+    @include border-radius(3px);
+  }
+}
+#QuoteRightContainer {
+  .ComponentList {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #999;
+    @include box-shadow(0 0 2px 0 #ccc);
+    @include border-radius(5px);
+    background: #fcfcfc;
+
+    table {
+      margin: 10px 0;
+      border-collapse: collapse;}
+    th, td{
+      padding: 5px;
+      border: 1px solid #999;}
+    .SmallControl {
+      display: inline-block;
+      margin: 2px 5px 2px 0;
+      padding: 5px;
+      @include border-radius(3px);
+      @include box-shadow(0 1px 1px 0 #999);
+      background: #82BA00;
+      color: #efefef; }
+    .ItemDelete, .ItemUnavailable {background: #ff9645;}
+    #reloadinstaller .row0 {
+      background: #e7e7e7;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+//[Quote Main Page Layout]
+//  + #QuoteWrapper
+//    + #QuoteNav
+//      - ul
+//    + #QuoteMainContainer
+//      - .QuoteSectionContainer, .ExtraContainer, .STCContainer, .InverterContainer, .MountingContainer, .PanelContainer, .InstallerContainer
+//        - h1
+//        - .SingleItemContainer (This was used in debugging)
+//          - .ItemInputContainer
+//            - p.SelectLabel
+//            - p a.ItemOption
+//          - .ItemQtyContainer
+//            - .Increase, .Decrease
+//            - .ItemObj
+//            - .ItemQty
+//      - .
+//      - .QuoteSummaryContainer
+//        - h1
+//        - a.Summarise
+//        - QuoteSummary
+//          - .QuoteSummaryTable
+//          - .SummaryWarning
+//-----------------------------------------------------------------------------
+#QuoteMainContainer {
+  h1 {
+    margin-bottom:3px;
+    padding: 10px;
+    border: none;
+    background: #efefef;
+    color: #78bd1e;}
+  .Bold {font-weight: 700;}
+  .DiscountPrice {
+    background: transparent;
+    border: none;
+    width: 6em;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    padding-right: 0;
+    font-weight: 700;
+    text-align: right;
+  }
+  .ExtraItem, .Summarize {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px;
+    background: #82BA00;
+    @include box-shadow(1px 1px 1px 0 #999);
+    @include border-radius(3px);
+    color: white;}
+  .QuoteSummaryContainer {
+    position: fixed;
+    min-width: 200px;
+    min-height: 100px;
+    top: 20%;
+    right: 5px;
+    margin: 5px;
+    padding-bottom: 10px;
+    @include box-shadow(0 0 5px 0 #999);
+    background: rgb(253, 226, 139);
+
+    h1 {
+      background: #ff9645;
+      color: white;}
+    table {border-collapse: collapse;}
+    th, td{
+      padding: 5px;
+      text-align:  left;
+      border: 1px solid #cd0a0a;}
+    .Subtotal {text-align: right;}
+    th.Subtotal {
+      font-size: 1.3em;
+    }
+    .DiscountPrice {
+      font-size: 1em;
+    }
+    .qty {text-align: center;}
+    .Remove {background: #ffc5fe;}
+    .SaveSuccess, .SaveFail {
+      text-align: center;
+      font-size: 2em;
+      line-height: 2em;
+      color: #78bd1e;
+      margin: 5px 0;
+      border: 2px solid #78bd1e;
+      @include border-radius(5px);
+    }
+    .SaveFail {
+      color: #cd0a0a;
+      border-color: #dc143c;
+    }
+    .QuoteSummary {padding: 5px;}
+    .SummaryWarning {
+      margin: 5px 0;
+      padding: 5px;
+      border: 2px solid #dc143c;
+      @include border-radius(5px);
+      color: #dc143c;
+      h5 {
+        margin: 0 5px 5px 5px;
+        padding: 0 5px 5px 5px;
+        border-bottom: 1px solid #dc143c;
+        text-align: center;}
+      p {padding: 3px 5px; }
+    }
+
+  }
+  .QuoteSectionContainer {
+    position: relative;
+    margin: 10px;
+    background: #ffffff;
+    @include border-radius(5px);
+    @include box-shadow(0 0 2px 0 #999);
+    &>div{
+      padding: 5px;
+    }
+    h1 {
+      @include border-radius(5px 5px 0 0);}
+    p {
+      padding: 5px 0;}
+    .ItemOption, .UseSuggestion, .STCUseSuggestion {
+      display: inline-block;
+      border: 1px solid #ffa313;
+      margin:  0 5px 5px 0;
+      padding: 5px;
+      @include border-radius(3px);
+      @include box-shadow(1px 1px 1px 0 #ccc);
+
+      &.Selected {
+        background: #ff9645;
+        color: white;
+      }
+    }
+    input[type='text'], input[type='password'], input[type='number'] {
+      width: 60px;
+      padding: 3px;
+      border: 1px solid #888;
+      @include border-radius(3px);
+      text-align: center;
+    }
+    input.ExtraObj {
+      border: none;
+      border-bottom: 1px solid #999;
+      width: 150px;
+      @include border-radius(0);}
+    .Increase, .Decrease {
+      display: inline-block;
+      padding: 3px;
+      width: 25px;
+      border: 1px solid #999;
+      background: #f3f3f3;
+      @include border-radius(3px);
+      text-align: center;
+      font-weight: 700;}
+    .Suggestion {
+      padding: 5px;
+      background: white;
+      @include border-radius(3px);
+      @include box-shadow(0 0 1px #999);}
+    .SelectLabel {
+      padding-bottom: 5px;
+      color: #d55d00;}
+  }
+  .STCContainer, .MountingContainer, .ExtraContainer {
+    label {
+      padding: 0 5px 0;
+      width: 8em;
+      text-align: right;}
+    input {
+      margin-right: 5px;}
+
+  }
+  .MarkupStcContainer {
+    label {
+      width: 15em;
+      margin-right: 5px;
+      text-align: right;}
+    .Message {
+      display: inline-block;
+      padding: 4px;
+      margin-left: 5px;
+      @include border-radius(5px);}
+    .Success {
+      color: #006400;
+      border: 1px solid #82BA00;}
+    .Error {
+      color: maroon;
+      border: 1px solid #c10000;}
+  }
+
+  .CustomerContainer {
+    z-index: 9;
+    position: fixed;
+    top: 14%;
+    right: 10px;
+    margin-right: 0;
+    padding: 0;
+    background: $customer_background;
+    color: $customer_foreground;
+    @include border-radius(5px);
+
+    .CustomerExplanation{max-width: 400px;}
+    h1 {
+      background: transparent;
+      position: relative;
+      color: $customer_foreground;
+      line-height: 1.85em;
+      padding: 0 0 0 5px;
+      min-width: 200px;
+    }
+    input[type='text'].CustomerName {
+      width: 10em;
+      text-align: left;
+    }
+    .CustomerSearch {
+      background: $customer_foreground;
+      margin: 0 5px;
+      padding: 4px 5px;
+    }
+    .ToggleCustomerInfo {
+      float: right;
+      display: inline-block;
+      color: $customer_foreground;
+      background: darken($customer_background, 70%);
+      padding: 6px 10px;
+      margin: 0;
+    }
+    .CustomerEntry {
+      margin: 0 5px 5px 5px;
+      padding: 5px;
+      @include border-radius(5px);
+      background: $customer_background;
+      cursor: pointer;
+    }
+    .SelectedCustomer {
+      background:darken($customer_background, 50%);
+    }
+    .SearchResultContainer {
+      max-height: 400px;
+      background: darken($customer_background, 10%);
+      @include border-radius(5px 0 0 5px);
+      p.Bold {padding-left: 10px;}
+      margin: 0 20px;
+      padding-bottom: 5px;
+    }
+
+    &.MinimumDisplay {
+      .CustomerInfo {display: none;}
+      .SelectedCustomer {display: block;}
+    }
+
+  }
+}
+
+
+// Special load waiting element
+#Waiting {
+  margin: 5px;
+  padding: 3px 5px;
+  @include border-radius(10px);
+  background: #78bd1e;
+  @include box-shadow(0 0 2px 0 #999);
+  display: inline-block;
+  color: white;
+  .CustomerContainer & {
+    background: $customer_foreground;
+  }
+}
+
+// Special Sticky element
+.sticky-wrapper{position:fixed;width: 19.9%;
+  #QuoteLeftContainer {width: 100%;}}
+
+
+// Portable Adjustment
+@media only screen and (max-width: 480px) {
+  html { -webkit-text-size-adjust: none;}
+  #QuoteMainContainer {
+    h1{font-size: 1em;}
+    .QuoteSummaryContainer {
+      position: inherit;
+      margin: 10px;
+      .QuoteSummaryTable {width:100%; margin: 0 0 5px 0;}
+    }
+    .CustomerContainer {
+      position: inherit;
+      margin: 10px;
+      h1 {
+        line-height: 2.1em;
+      }
+      .ToggleCustomerInfo {
+        padding: 4px 10px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,75 @@
+.summary_table{border-collapse: collapse; margin: 10px 0; font-size: 1.3em; margin-left: 0px;width: 1000px;}
+.summary_table th, .summary_table td{padding: 7px 10px; border-bottom: 1px solid #eee; text-align: center; border-right: 1px solid #eee; border-left: 1px solid #eee; font-weight: normal;}
+tr.first_row th{background: green;  color: white;}
+tr.last_row th{background: none; font-weight: 700;}
+a.toggleLink{1float: left; color: white; cursor: pointer; background: #568F53; padding: 2px 5px; display: inline-block; margin-bottom: 2px;}
+table.toggle{clear: both;}
+th{cursor: pointer;}
+
+ul.dashboard_nav {  list-style: none; margin:0; padding: 0; overflow: auto; padding-right: 10px; 1border-bottom: 1px solid gray; background: #E0E0E0;}
+ul.dashboard_nav li {text-align: left; margin:0 3px;  float: left; padding-bottom: 0;}
+ul.dashboard_nav li a{display: block;font-family: Arial,sans-serif;text-decoration: none;padding: 2px 8px;font-size: 100%;color: #06C;1font-weight: bold;}
+ul.dashboard_nav li a:hover{text-decoration: none; color: green; border-bottom: 3px solid green; }
+ul.dashboard_nav li.current { 1background: none; }
+ul.dashboard_nav li.current  a{color: green;border-bottom: 3px solid green;}
+div#report_wrapper{padding: 5px;}
+div#nav_wrapper{1padding: 2px; 1background: #9ABC98;}
+h3{color: #F46B25; padding: 2px 10px; margin: 0 0; font-size: 150%; margin: 10px 0 10px 0; border-bottom: 2px solid #F46B25; background:white;}
+.progress_report h3{margin-top: 60px;}
+.progress_report h3 span{display:inline-block; margin-left: 20px; color: #F46B25;}
+p{font-size: 120%;}
+
+p.download{width: 1000px; overflow: auto;margin-bottom: 20px;}
+p.download a{display: block; float: left; padding: 10px; text-decoration: none; background: url(down.png) no-repeat center left; padding-left:24px; color: #046a3a; }
+p.download a:hover{text-decoration: none;}
+
+
+.detail_table{1width: 1000px;}
+.detail_table{border-collapse: collapse; margin: 10px 0; font-size: 1.3em; margin-left: 0px;}
+.detail_table th, .detail_table td{padding: 7px 10px; border-bottom: 1px solid #eee; text-align: center; border: 1px solid #046A3A;}
+
+.progress_table caption, .stock_table caption{padding: 0 0 5px; font-weight: bold;}
+
+div.bar_chart p{	padding: 3px 0;	margin: 7px 0; color: white; text-align: center;}
+div.bar_chart{	padding: 2px 0;	border-left: 1px solid gray;	margin-left: 20px;}
+div.bar_exp p{	padding: 0;	margin: 0;}
+div.bar_exp p span{	display:inline-block;	height: 10px;	width: 10px;	margin-right: 10px;}
+div.bar_exp{	margin-left: 20px;}
+
+.stock_table{width: 800px;}
+table.stock_sum_table{border-collapse: collapse; float: left; margin: 0 20px;font-size: 1.3em; }
+.stock_sum_table th, .stock_sum_table td{padding: 7px 10px; border: 1px solid #eee; text-align: center; }
+.stock_sum_table th{background: #f46b25;}
+
+div#explanation{padding: 10px; background: #f2f2f2; -moz-box-shadow: 0 0 5px #888;-webkit-box-shadow: 0 0 5px#888;box-shadow: 0 0 5px #888; overflow: auto;}
+div#explanation p{margin: 3px 0;}
+#explanation li{float: left; padding: 0 25px 0 0;}
+
+td.all_comments{text-align: left;}
+td.desc{max-width: 240px;}
+
+.progress_report h4{font-size: 1.2em; margin-left: 10px; padding-bottom: 0; margin-bottom: 0;}
+#month_select p{padding:0; margin: 0;}
+
+span.green{background: green; height: 14px;}
+span.orange{background: orange; height: 14px;}
+div.nav_li_div *{margin: 0; padding: 0;}
+div.nav_li_div p{margin: 1px 0; overflow: auto; }
+div.nav_li_div p span{float: left; font-size: 12px;}
+span.number{height: 16px; display: inline-block; margin-left: 2px;}
+
+#left_nav{width: 180px; float: left; overflow: auto;}
+#left_nav a.nav_a{display: block; margin: 5px 0; text-decoration:none; cursor: pointer; background: #f3f3f3;}
+#left_nav a.nav_a h6{font-size: 15px;}
+
+div.job_div table{width: 100%; margin: 10px 0; border-collapse: collapse;}
+	div.job_div th, div.job_div td{border: 1px solid white; background: #f2f2f2; padding: 5px;}
+	div.job_div th{background: green; color: white;}
+#report_wrapper	td.center{text-align: center; vertical-align: middle;}
+	
+div#vicqld{border-bottom: 2px solid green;}
+#vicqld a{display: inline-block; border-radius: 5px 5px 0 0; color: green; padding: 10px 20px; margin-right:10px;}
+#vicqld a:hover, #vicqld a.selected{background: green; color: white; cursor: pointer; text-decoration: none; 1font-weight:700;}
+#qld_jobs{display:none;}
+#report_wrapper td{vertical-align: top;}
+.sticky.waypoints-wrapper .waypoints-header{position: fixed;}
