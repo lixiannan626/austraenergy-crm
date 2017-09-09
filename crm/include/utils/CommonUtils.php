@@ -1627,14 +1627,14 @@ function getProductImages($id)
  * It returns the array details of the upload
  */
 
-function SaveImage($_FILES,$module,$id,$mode)
+function SaveImage($file,$module,$id,$mode)
 {
 	global $log, $root_directory;
-	$log->debug("Entering SaveImage(".$_FILES.",".$module.",".$id.",".$mode.") method ...");
+	$log->debug("Entering SaveImage(".$file.",".$module.",".$id.",".$mode.") method ...");
 	global $adb;
 	$uploaddir = $root_directory."test/".$module."/" ;//set this to which location you need to give the contact image
 	$log->info("The Location to Save the Contact Image is ".$uploaddir);
-	$file_path_name = $_FILES['imagename']['name'];
+	$file_path_name = $file['imagename']['name'];
 	if (isset($_REQUEST['imagename_hidden'])) {
 		$file_name = vtlib_purify($_REQUEST['imagename_hidden']);
 	} else {
@@ -1652,13 +1652,13 @@ function SaveImage($_FILES,$module,$id,$mode)
 		$encode_field_values="";
 		$errormessage="";
 
-		$move_upload_status=move_uploaded_file($_FILES["imagename"]["tmp_name"],$uploaddir.$image_name_val);
+		$move_upload_status=move_uploaded_file($file["imagename"]["tmp_name"],$uploaddir.$image_name_val);
 		$image_error="false";
 
 		//if there is an error in the uploading of image
 
-		$filetype= $_FILES['imagename']['type'];
-		$filesize = $_FILES['imagename']['size'];
+		$filetype= $file['imagename']['type'];
+		$filesize = $file['imagename']['size'];
 
 		$filetype_array=explode("/",$filetype);
 
@@ -1669,7 +1669,7 @@ function SaveImage($_FILES,$module,$id,$mode)
 		if(!$move_upload_status) //if any error during file uploading
 		{
 			$log->debug("Error is present in uploading Contact Image.");
-			$errorCode =  $_FILES['imagename']['error'];
+			$errorCode =  $file['imagename']['error'];
 			if($errorCode == 4)
 			{
 				$errorcode="no-image";
